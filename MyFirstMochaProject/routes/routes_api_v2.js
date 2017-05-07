@@ -11,8 +11,11 @@ router.get('/info', function(request, response){
     })
 })
 
-router.get('/recipes/:category', function(request, response, next){
-    var category = request.params.category || '';
+
+
+
+router.get('/recipes', function(request, response, next){
+    var category = request.query.category || '';
 
     var cat = categorien.filter(function (u) {
         return (u.category === category);
@@ -22,6 +25,12 @@ router.get('/recipes/:category', function(request, response, next){
     response.json(cat);
 
 })
+
+router.get('/recipes', function(request, response){
+    response.status(200);
+    response.json(categorien);
+    })
+
 
 router.get('*', function(request, response){
     response.status(404);

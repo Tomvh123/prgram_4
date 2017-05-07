@@ -28,3 +28,5 @@ app.listen(port, function(){
     console.log('The magic happens at http://localhost ' + port);
 });
 
+module.exports = app;
+
