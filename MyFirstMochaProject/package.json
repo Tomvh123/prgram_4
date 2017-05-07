@@ -1,13 +1,18 @@
 {
-  "name": "myrandomuser",
+  "name": "myfirstmochaproject",
   "version": "1.0.0",
-  "description": "Random User Generator REST API in Node.js",
-  "main": "myrandomuser.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tom",
   "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.3.0"
+  },
   "dependencies": {
     "express": "^4.15.2"
   }
