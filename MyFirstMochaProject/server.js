@@ -3,7 +3,15 @@
  */
 
 var express = require('express');
+
+var config = require('./config.json');
 var app = express();
+
+app.set('PORT', config.webPort);
+
+var port = process.env.PORT || app.get('PORT');
+
+
 
 app.get('/', function(request, response){
     response.send('get');
@@ -17,6 +25,6 @@ app.put('/', function(request, response){
     response.send('put')
 })
 
-app.listen(8080, function(){
-    console.log('server app is listening on port 8080')
-})
+app.listen(port, function(){
+    console.log('The magic happens at http://localhost ' + port);
+});
